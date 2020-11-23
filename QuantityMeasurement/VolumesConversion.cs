@@ -37,5 +37,10 @@ namespace QuantityMeasurement
             }
             return ValueToWorkin;
         }
+
+        public double AdditionOfVolumes(double element1, Volumes firstElementUnit, double element2, Volumes secondElementUnit) { 
+       
+        return ConvertMethod(element1, firstElementUnit, Volumes.litre)+ ConvertMethod(element2, secondElementUnit, Volumes.litre);
+        }
     }
 }

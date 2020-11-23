@@ -57,5 +57,13 @@ namespace QuantityMeasurementTest
             Assert.AreEqual(3.84, output, 0.01);
 
         }
+
+        [Test]
+        public void GivenValuesinGallonLitre_shouldReturnAddition() {
+            VolumesConversion conversionVolumes = new VolumesConversion();
+            double output = conversionVolumes.AdditionOfVolumes(1, Volumes.gallon, 3.78, Volumes.litre);
+            Assert.AreEqual(7.62, output, 0.01);
+
+        }
     }
 }
