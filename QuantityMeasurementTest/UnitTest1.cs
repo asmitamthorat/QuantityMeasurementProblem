@@ -73,5 +73,13 @@ namespace QuantityMeasurementTest
             Assert.AreEqual(1001, output, 0.01);
 
         }
+
+        [Test]
+        public void GivenTemperatureinFaherenheit_shouldConvertintoCelsius() {
+            TemperatureConversion temperatureConversion = new TemperatureConversion();
+            double output = temperatureConversion.tempConversion(212, Temparature.Faherenheit, Temparature.celsius);
+            Assert.AreEqual(100, output, 0.01);
+        
+        }
     }
 }
