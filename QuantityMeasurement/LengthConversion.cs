@@ -40,6 +40,12 @@ namespace QuantityMeasurement
             }
             return ValueToWorkin;
         }
-       
+
+        public double AdditionOfLength(double element1, Distance firstElementUnit, double element2, Distance secondElementUnit)
+        {
+            return ConvertMethod(element1, firstElementUnit, Distance.Inches) + ConvertMethod(element2, secondElementUnit, Distance.Inches);
+
+        }
+
     }
 }
