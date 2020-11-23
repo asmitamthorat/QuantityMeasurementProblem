@@ -37,5 +37,13 @@ namespace QuantityMeasurementTest
             Assert.AreEqual(12.00, output, 0.01);
 
         }
+
+        [Test]
+        public void giventwoFeet_WhenToCompare_ReturnsTrue() {
+            LengthConversion conversion = new LengthConversion();
+            double output = conversion.ConvertMethod(2, Distance.Inches, Distance.Centimeters);
+            Assert.AreEqual(5.08, output, 0.01);
+
+        }
     }
 }
