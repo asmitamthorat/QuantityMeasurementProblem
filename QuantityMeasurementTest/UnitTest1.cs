@@ -22,5 +22,20 @@ namespace QuantityMeasurementTest
             Assert.AreEqual(0.0, output);
 
         }
+
+        [Test]
+        public void givenThreeFeet_whenEqual_ShouldReturnTrue() {
+            LengthConversion conversion = new LengthConversion();
+            double output = conversion.ConvertMethod(3, Distance.Feet, Distance.Yards);
+            Assert.AreEqual(1.00, output, 0.01);
+        }
+
+        [Test]
+        public void givenoneFeetAndthreeInches_WhenToCompare_ReturnsTrue() {
+            LengthConversion conversion = new LengthConversion();
+            double output = conversion.ConvertMethod(1, Distance.Feet, Distance.Inches);
+            Assert.AreEqual(12.00, output, 0.01);
+
+        }
     }
 }
