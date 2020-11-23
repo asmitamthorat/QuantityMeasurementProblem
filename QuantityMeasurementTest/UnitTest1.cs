@@ -65,5 +65,13 @@ namespace QuantityMeasurementTest
             Assert.AreEqual(7.62, output, 0.01);
 
         }
+
+        [Test]
+        public void GivenValuesInTonneAndGrames_ShouldReturnAddition() {
+            WeightConversion weightConversion = new WeightConversion();
+            double output = weightConversion.AdditionOfWeight(1, Weight.tonne, 1000, Weight.grams);
+            Assert.AreEqual(1001, output, 0.01);
+
+        }
     }
 }
