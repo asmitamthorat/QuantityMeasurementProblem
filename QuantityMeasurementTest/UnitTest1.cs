@@ -5,8 +5,6 @@ namespace QuantityMeasurementTest
 {
     public class Tests
     {
-       
-
         [Test]
         public void GivenMeter_WhenEqual_ShouldReturnTrue()
         {
@@ -24,14 +22,14 @@ namespace QuantityMeasurementTest
         }
 
         [Test]
-        public void givenThreeFeet_whenEqual_ShouldReturnTrue() {
+        public void GivenThreeFeet_whenEqual_ShouldReturnTrue() {
             LengthConversion conversion = new LengthConversion();
             double output = conversion.ConvertMethod(3, Distance.Feet, Distance.Yards);
             Assert.AreEqual(1.00, output, 0.01);
         }
 
         [Test]
-        public void givenoneFeetAndthreeInches_WhenToCompare_ReturnsTrue() {
+        public void GivenoneFeetAndthreeInches_WhenToCompare_ReturnsTrue() {
             LengthConversion conversion = new LengthConversion();
             double output = conversion.ConvertMethod(1, Distance.Feet, Distance.Inches);
             Assert.AreEqual(12.00, output, 0.01);
@@ -39,17 +37,24 @@ namespace QuantityMeasurementTest
         }
 
         [Test]
-        public void giventwoInches_WhenToCompare_ReturnsTrue() {
+        public void GiventwoInches_WhenToCompare_ReturnsTrue() {
             LengthConversion conversion = new LengthConversion();
             double output = conversion.ConvertMethod(2, Distance.Inches, Distance.Centimeters);
             Assert.AreEqual(5.08, output, 0.01);
         }
 
         [Test]
-        public void givenInches_WhenAdded_ReturnsSum_InInches() {
+        public void GivenInches_WhenAdded_ReturnsSum_InInches() {
             LengthConversion conversion = new LengthConversion();
             double output = conversion.AdditionOfLength(2, Distance.Inches, 3, Distance.Inches);
             Assert.AreEqual(5.00, output, 0.01);
+        }
+
+        [Test]
+        public void GivenGallon_whenEqual_shouldReturnTrue() {
+            VolumesConversion conversionVolumes = new VolumesConversion();
+            double output = conversionVolumes.ConvertMethod(1, Volumes.gallon, Volumes.litre);
+            Assert.AreEqual(3.84, output, 0.01);
 
         }
     }
